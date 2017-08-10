@@ -20,11 +20,19 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 Copy emacs/.emacs /root/.emacs
 Copy emacs/.emacs.d /root/.emacs.d
+Copy python-packages/django/req.txt /root/req.txt
+
+
+RUN echo "export PS1='>'" | tee -a ~/.bashrc \ 
+    && git config --global alias.co checkout \
+    && git config --global alias.br branch \
+    && git config --global alias.ci commit \
+    && git config --global alias.st status \
+    && git config --global alias.unstage 'reset HEAD --' \
+    && git config --global alias.last 'log -1 HEAD' \
+    && pip install -r /root/req.txt \
+    && rm /root/req.txt
+
+EXPOSE 8000    
     
-#RUN mkdir ~/.emacs.d/plugins && cd ~/.emacs.d/plugins && git clone --recursive https://github.com/joaotavora/yasnippet
-
-EXPOSE 8000
-
-#RUN pip --no-cache-dir install django faker
-
 WORKDIR /workspace
