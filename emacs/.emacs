@@ -1,5 +1,6 @@
 (load "~/.emacs.d/lisp/python/jedi-starter")
 (load "~/.emacs.d/lisp/web/web-mode")
+(load "~/.emacs.d/lisp/users-configs/casey.emacs")
 
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
