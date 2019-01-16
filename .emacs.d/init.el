@@ -1,19 +1,19 @@
-(load "~/.emacs.d/lisp/python/jedi-starter")
-(load "~/.emacs.d/lisp/web/web-mode")
-
-(require 'web-mode)
-(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-
+;(load "~/.emacs.d/lisp/python/jedi-starter")
+;(load "~/.emacs.d/lisp/web/web-mode")
+;(load "~/.emacs.d/lisp/users-configs/casey.emacs.el")
+;(require 'web-mode)
+;(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+;(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+;(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+;(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+;(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+;(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+;(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+;(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+;(undo discard-info)
 
 ;my setup
-
+(defalias 'yes-or-no-p 'y-or-n-p)
 (define-key global-map "\eq" 'other-window)
 
 ; Startup windowing
