@@ -15,7 +15,7 @@
 ;my setup
 (defalias 'yes-or-no-p 'y-or-n-p)
 (define-key global-map "\eq" 'other-window)
-
+(setq explicit-shell-file-name "/bin/bash")
 ; Startup windowing
 ; (setq next-line-add-newlines nil)
 (setq-default truncate-lines t)
